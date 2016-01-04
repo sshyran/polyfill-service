@@ -22,7 +22,7 @@
     var CHAINING_CYCLE = 'then() cannot return same Promise that it resolves.';
 
     // Polyfill service change: The following line is modified from the upstream source
-    var setImmediate = _enqueueMicrotask;
+    var setImmediate = require('../_enqueueMicrotask/polyfill');
 
     var isArray = Array.isArray || function (anything) {
         return Object.prototype.toString.call(anything) == '[object Array]';
